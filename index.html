@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    
+    <link href="css/style.css" rel="stylesheet" />
+
+</head>
+<body>
+
+<nav class="filter">
+    <ul>
+        <li class="filter-text">Apply your filter:</li>
+        <li>
+            <label >
+                <input  type="checkbox" checked="checked" name="filter" value="Furniture" />
+                <span>Furniture</span>
+            </label>
+        </li>
+        <li>
+            <label>
+                <input  type="checkbox" name="filter" value="Cars" /><span>Cars</span>
+            </label>
+        </li>
+        <li>
+            <label>
+                <input  type="checkbox" name="filter" value="Game" /><span>Games</span>
+            </label>
+        </li>
+    </ul>
+</nav>
+<section class="carousel-section">
+    
+    <div class="carousel">
+        <ul class="carousel-shaddow">
+            <li class="left-shadow"></li>
+            <li class="right-shadow"></li>
+        </ul>
+        <ul class="container">
+
+        </ul>
+    </div>
+    <ul class="carousel_bullets"></ul>
+    
+</section>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <img class="modal-image" >
+    </div>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  
+<script src="js/carousel.js"></script>
+</body>
+</html>

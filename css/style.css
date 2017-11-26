@@ -1,0 +1,274 @@
+body {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  color: #000000;
+  padding: 0;
+  margin: 37px auto;
+  text-align: center;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.cf {
+  *zoom: 1;
+}
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover {
+  text-decoration: none;
+}
+a:focus {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.hidden {
+  display: none;
+}
+.visible {
+  display: block;
+}
+.filter li {
+  margin: 5px 10px;
+}
+@media screen and (min-width: 501px) {
+  .filter li {
+    display: inline-block;
+  }
+}
+.filter li input[type='checkbox'] {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  line-height: 0;
+}
+.filter li input[type='checkbox'] + span {
+  background-color: #f1f1f1;
+  color: #000;
+  padding: 3px 10px;
+  display: block;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.filter li input[type='checkbox'] + span:hover {
+  background-color: #414141;
+  color: #fff;
+}
+@media screen and (min-width: 767px) {
+  .filter li input[type='checkbox'] + span {
+    min-width: 170px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .filter li input[type='checkbox'] + span {
+    min-width: 170px;
+  }
+}
+.filter li input[type='checkbox']:checked + span {
+  background-color: #414141;
+  color: #fff;
+}
+.carousel-section {
+  margin: 30px 0;
+  position: relative;
+}
+.carousel {
+  margin: 30px  0 0;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 0px;
+  margin-left: 0px;
+}
+.carousel .carousel-shaddow {
+  display: none;
+}
+@media only screen and (min-width: 717px) {
+  .carousel .carousel-shaddow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    width: 100%;
+    display: block;
+  }
+  .carousel .carousel-shaddow li {
+    display: inline-block;
+    position: relative;
+    background-color: #414141;
+    background-color: rgba(65, 65, 65, 0.8);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+  }
+  .carousel .carousel-shaddow li:first-child {
+    left: 0;
+  }
+  .carousel .carousel-shaddow li:last-child {
+    right: 0;
+  }
+}
+.carousel > ul {
+  width: 5000px;
+  overflow: hidden;
+  position: absolute;
+  display: block;
+  margin-left: -10px;
+}
+.carousel > ul li {
+  float: left;
+  webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  line-height: 0;
+  cursor: pointer;
+  padding: 0 10px;
+}
+.carousel_bullets {
+  position: relative;
+  padding: 17px 0;
+}
+.carousel_bullets li {
+  background-color: #414141;
+  border-radius: 50%;
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+  margin: 0 15px;
+  cursor: pointer;
+}
+.carousel_bullets li:hover,
+.carousel_bullets li.bullet_selected {
+  background-color: #b62d3d;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #414141;
+  background-color: rgba(65, 65, 65, 0.9);
+}
+.modal .modal-content {
+  margin: 0 auto;
+  position: relative;
+  width: 716px;
+}
+.modal .modal-image {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 716px;
+}
+.modal .modal-image {
+  -webkit-animation: zoom 0.6s;
+  animation-name: zoom 0.6s;
+}
+.modal .close {
+  position: absolute;
+  top: -14px;
+  right: 62px;
+  color: #414141;
+  background-color: rgba(179, 179, 179, 0.9);
+  font-size: 16px;
+  font-weight: normal;
+  width: 25px;
+  height: 25px;
+  transition: 0.3s;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-animation: zoom 0.8s;
+  animation-name: zoom 0.8s;
+  z-index: 2;
+  padding-top: 1px;
+  cursor: pointer;
+}
+.modal .close:hover {
+  color: #414141;
+  background-color: rgba(179, 179, 179, 0.8);
+}
+@media only screen and (max-width: 716px) {
+  .modal .modal-content {
+    width: auto;
+  }
+  .modal .modal-image {
+    width: 90%;
+  }
+  .modal .close {
+    right: 17px;
+  }
+}
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
